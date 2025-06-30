@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lịch sử cảm xúc</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .entry {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .entry img {
+            width: 160px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <a href="/export/excel" target="_blank">📄 Xuất Excel</a>
+
+    <h1>Lịch sử nhận diện cảm xúc</h1>
+    <a href="/">← Quay lại webcam</a>
+    {% for time, emotion, img in history %}
+        <div class="entry">
+            <img src="{{ url_for('static', filename=img) }}">
+            <div>
+                <p><strong>Ngày:</strong> {{ time.strftime('%d/%m/%Y') }}</p>
+                <p><strong>Giờ:</strong> {{ time.strftime('%H:%M:%S') }}</p>
+                <p><strong>Cảm xúc:</strong> {{ emotion }}</p>
+            </div>
+        </div>
+    {% else %}
+        <p>Chưa có dữ liệu.</p>
+    {% endfor %}
+</body>
+</html>
