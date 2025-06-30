@@ -5,7 +5,7 @@ import mediapipe as mp
 
 emotions = ['Anger', 'Disgust', 'Fear', 'Happiness', 'Neutral', 'Sadness', 'Surprise']
 
-model = load_model('model_optimal.h5')
+model = load_model('model/fer2013_model.pth')
 
 mp_face_detection = mp.solutions.face_detection
 

@@ -3,7 +3,8 @@ import numpy as np
 from tensorflow.keras.models import load_model
 
 # Load mô hình đã huấn luyện
-model = load_model('vgg16_cnn.h5')
+# # model = load_model('model/vgg16_cnn.h5')
+model = load_model('model/fer2013_cnn.h5')
 
 # Định nghĩa nhãn cảm xúc (theo FER2013)
 emotions = {0: 'Angry', 1: 'Disgust', 2: 'Fear', 3: 'Happy', 4: 'Sad', 5: 'Surprise', 6: 'Neutral'}

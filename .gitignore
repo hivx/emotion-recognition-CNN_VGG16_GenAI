@@ -1,1 +1,3 @@
-.git
+/model/*.pth
+/model/*.h5
+/model/*.pkl
