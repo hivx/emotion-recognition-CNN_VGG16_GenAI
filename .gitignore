@@ -1,5 +1,5 @@
 /model/*.pth
 /model/*.h5
 /model/*.pkl
-/static/*
+/static/*.jpg
 history.csv
